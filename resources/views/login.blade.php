@@ -30,21 +30,27 @@
 								</div>
 								<input type="text" name="" class="form-control input_user" value="" placeholder="Usuario">
 							</div>
-							<div class="input-group mb-2">
+							<div class="input-group mb-3">
 								<div class="input-group-append">
 									<span class="input-group-text"><i class="fas fa-key"></i></span>
 								</div>
-								<input type="password" name="" class="form-control input_pass" value="" placeholder="Contrase&ntilde;a">
+								<input type="password" name="" class="form-control input_pass" value="" placeholder="Contraseña">
 							</div>
-							<div class="form-group">
-								<div class="custom-control custom-checkbox">
-									<input type="checkbox" class="custom-control-input" id="customControlInline">
-									<label class="custom-control-label text_re" for="customControlInline">Recordarme</label>
+							<div class="input-group mb-2">
+								<div class="input-group-append">
+									<span class="input-group-text"><i class="fas fa-unlock"></i></span>
+								</div>      
+                                <select  type="varchar" class="form-control">
+                                    <option value="" disabled selected >Elige el acceso</option>
+                                    <option value="1">Acceso 1</option>
+                                    <option value="2">Acceso 2</option>
+                                </select>
+							</div>
+							<div>
+								<div class="d-flex justify-content-center mt-3 login_container"> 
+									<button type="button" name="button" class="btn login_btn" onclick="location.href='{{ url('/index') }}'">Iniciar Sesión</button>
 								</div>
-								</div>	
-							<div class="d-flex justify-content-center mt-3 login_container"> 
-								<button type="button" name="button" class="btn login_btn" onclick="location.href='{{ url('/index') }}'">Iniciar Sesi&oacute;n</button>
-							</div>
+							</div>	
 						</form>
 					</div>
 				</div>

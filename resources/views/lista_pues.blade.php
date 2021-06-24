@@ -1,4 +1,6 @@
-@include('layouts.header')  
+@extends('layouts.app')
+
+@section('content') 
 
         <div id="page-wrapper" >
           <div class="header"> 
@@ -15,16 +17,20 @@
                     <div class="table-responsive">
                       <div class=" col-md-12">
                         <div class="row">
-                          <div class="btn-group col-md-2 right">
-                            <a href="{{ url('/papelera_pues') }}" class="btn btn-warning">
-                              <i class="material-icons left">delete_sweep</i>PAPELERA
-                            </a>
-                          </div>  
-                          <div class="btn-group col-md-2 right">
-                            <a href="{{ url('/registrar_pues') }}" class="btn btn-success">
-                              <i class="material-icons left">queue</i>REGISTRAR
-                            </a>
-                          </div> 
+                          <div class="btn-group  col s12 m2 right">
+                            <span tooltip="Clic para recuperar registros eliminados" flow="left">
+                              <a href="{{ url('/papelera_pues') }}" class="btn btn-warning">
+                                <i class="material-icons left">delete_sweep</i>PAPELERA
+                              </a>
+                            </span>
+                          </div>
+                          <div class="btn-group  col s12 m2 right">
+                            <span tooltip="Clic para registrar nuevo puesto" flow="left">
+                              <a href="{{ url('/registrar_pues') }}" class="btn btn-success">
+                                <i class="material-icons left">queue</i>REGISTRAR
+                              </a>
+                            </span>
+                          </div>
                         </div>
                         <div class="row">
                           <div class="col-md-6">
@@ -66,32 +72,48 @@
                             <td class="center">1</td>
                             <td class="center">Administrador</td>
                             <td class="center">
-                              <button  onclick="location.href='{{ url('/actualizar_pues') }}'" type="submit" class="btn-primary dropdown-toggle btn"><i class="fa fa-pencil-square"></i></button>
-                              <button type="submit" class="btn btn-danger" onclick="AlertaEliminar()" ><i class="fa fa-trash-o"></i></button>
+                              <span tooltip="Clic para editar puesto" flow="left">
+                                <button  onclick="location.href='{{ url('/actualizar_pues') }}'" type="submit" class="btn-primary dropdown-toggle btn" ><i class="fa fa-pencil-square" ></i></button>
+                              </span>
+                              <span tooltip="Clic para eliminar puesto" flow="left">
+                                <button type="submit" class="btn btn-danger" onclick="AlertaEliminar()" ><i class="fa fa-trash-o "></i></button>
+                              </span>
                             </td>
                           </tr>  
                           <tr class="even gradeC">
                             <td class="center">2</td>
                             <td class="center">Almacén</td>
                             <td class="center">
-                              <button  onclick="location.href='{{ url('/actualizar_pues') }}'" type="submit" class="btn-primary dropdown-toggle btn"><i class="fa fa-pencil-square"></i></button>
-                              <button type="submit" class="btn btn-danger" onclick="AlertaEliminar()" ><i class="fa fa-trash-o"></i></button>
+                              <span tooltip="Clic para editar puesto" flow="left">
+                                <button  onclick="location.href='{{ url('/actualizar_pues') }}'" type="submit" class="btn-primary dropdown-toggle btn" ><i class="fa fa-pencil-square" ></i></button>
+                              </span>
+                              <span tooltip="Clic para eliminar puesto" flow="left">
+                                <button type="submit" class="btn btn-danger" onclick="AlertaEliminar()" ><i class="fa fa-trash-o "></i></button>
+                              </span>
                             </td>
                           </tr>  
                           <tr class="odd gradeA">
                             <td class="center">3</td>
                             <td class="center">Caja</td>
                             <td class="center">
-                              <button  onclick="location.href='{{ url('/actualizar_pues') }}'" type="submit" class="btn-primary dropdown-toggle btn"><i class="fa fa-pencil-square"></i></button>
-                              <button type="submit" class="btn btn-danger" onclick="AlertaEliminar()" ><i class="fa fa-trash-o"></i></button>
+                              <span tooltip="Clic para editar puesto" flow="left">
+                                <button  onclick="location.href='{{ url('/actualizar_pues') }}'" type="submit" class="btn-primary dropdown-toggle btn" ><i class="fa fa-pencil-square" ></i></button>
+                              </span>
+                              <span tooltip="Clic para eliminar puesto" flow="left">
+                                <button type="submit" class="btn btn-danger" onclick="AlertaEliminar()" ><i class="fa fa-trash-o "></i></button>
+                              </span>
                             </td>
                           </tr> 
                           <tr class="odd gradeA">
                             <td class="center">4</td>
                             <td class="center">Mostrador</td>
                             <td class="center">
-                              <button  onclick="location.href='{{ url('/actualizar_pues') }}'" type="submit" class="btn-primary dropdown-toggle btn"><i class="fa fa-pencil-square"></i></button>
-                              <button type="submit" class="btn btn-danger" onclick="AlertaEliminar()" ><i class="fa fa-trash-o"></i></button>
+                              <span tooltip="Clic para editar puesto" flow="left">
+                                <button  onclick="location.href='{{ url('/actualizar_pues') }}'" type="submit" class="btn-primary dropdown-toggle btn" ><i class="fa fa-pencil-square" ></i></button>
+                              </span>
+                              <span tooltip="Clic para eliminar puesto" flow="left">
+                                <button type="submit" class="btn btn-danger" onclick="AlertaEliminar()" ><i class="fa fa-trash-o "></i></button>
+                              </span>
                             </td>
                           </tr> 
                         </tbody>
@@ -130,5 +152,4 @@
             </div>
           </div>  
         </div>
-
-@include('layouts.footer')
+@endsection

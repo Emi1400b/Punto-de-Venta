@@ -9,8 +9,8 @@ function AlertaEliminar()
   })
   
   swalWithBootstrapButtons.fire({
-    title: '¿Seguro que quiere eliminar el registro?',
-    text: "No se volvera a mostrar el registro",
+    title: 'El registro no estara disponible para operaciones en el sistema',
+    text: "para reestablecer el registro deberá hacerlo desde papelera",
     icon: 'warning',
     showCancelButton: true,
     confirmButtonText: 'Sí, eliminar',
@@ -20,7 +20,7 @@ function AlertaEliminar()
     if (result.isConfirmed) {
       swalWithBootstrapButtons.fire(
         '¡Eliminado!',
-        'El registro ha sido eliminado',
+        'El registro ha sido movido a papelera',
         'success'
       )
     } else if (

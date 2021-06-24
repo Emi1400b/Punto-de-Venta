@@ -1,4 +1,6 @@
-@include('layouts.header')  
+@extends('layouts.app')
+
+@section('content') 
 
         <div id="page-wrapper" >
           <div class="header"> 
@@ -16,9 +18,11 @@
                       <div class=" col-md-12">
                         <div class="row">
                           <div class="btn-group col-md-2 right">
-                            <a href="{{ url('/registrar_venta') }}" class="btn btn-success">
-                              <i class="material-icons left">queue</i>REGISTRAR
-                            </a>
+                            <span tooltip="Clic para registrar nueva venta" flow="left">
+                              <a href="{{ url('/registrar_venta') }}" class="btn btn-success">
+                                <i class="material-icons left">queue</i>REGISTRAR
+                              </a>
+                            </span>
                           </div>
                         </div>
                         <div class="row">
@@ -69,7 +73,7 @@
                           <tr class="odd gradeX">
                             <td class="center">1</td>
                             <td class="center">Emi14</td>
-                            <td class="center">Carmela Remírez Correa</td>
+                            <td class="center">Carmela Ramírez Correa</td>
                             <td class="center">16/06/2021 </td>
                             <td class="center"></td>
                             <td class="center">0.00</td>
@@ -79,8 +83,12 @@
                             <td class="center">$245.00</td>
                             <td class="center">Efectivo</td>
                             <td class="center">
-                              <button  onclick="location.href='{{ url('/actualizar_venta') }}'" type="submit" class="btn-primary dropdown-toggle btn"><i class="fa fa-pencil-square"></i></button>
-                              <button  onclick="location.href='{{ url('/registrar_pagos_cred') }}'" type="submit" class="btn btn-warning"><i class="material-icons">monetization_on</i></button>
+                              <span tooltip="Clic para editar venta" flow="left">
+                                <button  onclick="location.href='{{ url('/actualizar_venta') }}'" type="submit" class="btn-primary dropdown-toggle btn" ><i class="fa fa-pencil-square" ></i></button>
+                              </span>
+                              <span tooltip="Clic para realizar pagos de crédito" flow="left">
+                                <button  onclick="location.href='{{ url('/registrar_pagos_cred') }}'" type="submit" class="btn btn-warning"><i class="material-icons">monetization_on</i></button>
+                              </span>
                             </td>
                           </tr>  
                           <tr class="even gradeC">
@@ -96,8 +104,12 @@
                             <td class="center">$115.00</td>
                             <td class="center">Transferencia</td>
                             <td class="center">
-                              <button  onclick="location.href='{{ url('/actualizar_venta') }}'" type="submit" class="btn-primary dropdown-toggle btn"><i class="fa fa-pencil-square"></i></button>
-                              <button  onclick="location.href='{{ url('/registrar_pagos_cred') }}'" type="submit" class="btn btn-warning"><i class="material-icons">monetization_on</i></button>
+                              <span tooltip="Clic para editar venta" flow="left">
+                                <button  onclick="location.href='{{ url('/actualizar_venta') }}'" type="submit" class="btn-primary dropdown-toggle btn" ><i class="fa fa-pencil-square" ></i></button>
+                              </span>
+                              <span tooltip="Clic para realizar pagos de crédito" flow="left">
+                                <button  onclick="location.href='{{ url('/registrar_pagos_cred') }}'" type="submit" class="btn btn-warning"><i class="material-icons">monetization_on</i></button>
+                              </span>
                             </td>
                           </tr>  
                           <tr class="odd gradeA">
@@ -113,8 +125,12 @@
                             <td class="center">$160.00</td>
                             <td class="center">Tarjeta</td>
                             <td class="center">
-                              <button  onclick="location.href='{{ url('/actualizar_venta') }}'" type="submit" class="btn-primary dropdown-toggle btn"><i class="fa fa-pencil-square"></i></button>
-                              <button  onclick="location.href='{{ url('/registrar_pagos_cred') }}'" type="submit" class="btn btn-warning"><i class="material-icons">monetization_on</i></button>
+                              <span tooltip="Clic para editar venta" flow="left">
+                                <button  onclick="location.href='{{ url('/actualizar_venta') }}'" type="submit" class="btn-primary dropdown-toggle btn" ><i class="fa fa-pencil-square" ></i></button>
+                              </span>
+                              <span tooltip="Clic para realizar pagos de crédito" flow="left">
+                                <button  onclick="location.href='{{ url('/registrar_pagos_cred') }}'" type="submit" class="btn btn-warning"><i class="material-icons">monetization_on</i></button>
+                              </span>
                             </td>
                           </tr> 
                           <tr class="odd gradeA">
@@ -130,8 +146,12 @@
                             <td class="center">$335.00</td>
                             <td class="center">Cheque</td>
                             <td class="center">
-                              <button  onclick="location.href='{{ url('/actualizar_venta') }}'" type="submit" class="btn-primary dropdown-toggle btn"><i class="fa fa-pencil-square"></i></button>
-                              <button  onclick="location.href='{{ url('/registrar_pagos_cred') }}'" type="submit" class="btn btn-warning"><i class="material-icons">monetization_on</i></button>
+                              <span tooltip="Clic para editar venta" flow="left">
+                                <button  onclick="location.href='{{ url('/actualizar_venta') }}'" type="submit" class="btn-primary dropdown-toggle btn" ><i class="fa fa-pencil-square" ></i></button>
+                              </span>
+                              <span tooltip="Clic para realizar pagos de crédito" flow="left">
+                                <button  onclick="location.href='{{ url('/registrar_pagos_cred') }}'" type="submit" class="btn btn-warning"><i class="material-icons">monetization_on</i></button>
+                              </span>
                             </td>
                           </tr> 
                         </tbody>
@@ -171,4 +191,4 @@
           </div>  
         </div>
 
-@include('layouts.footer')
+@endsection

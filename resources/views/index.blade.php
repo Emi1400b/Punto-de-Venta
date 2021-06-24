@@ -1,4 +1,6 @@
-@include('layouts.header')
+@extends('layouts.app')
+
+@section('content')
 
             <div id="page-wrapper">
                 <div class="header">
@@ -61,4 +63,4 @@
                     </div>
                 </div>
             </div>
-@include('layouts.footer')
+@endsection

@@ -5,18 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Punto de Venta</title>
 
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-        <link href="{{ asset('assets/materialize/css/materialize.min.css') }}" rel="stylesheet" media="screen,projection">
-        <!-- Estilos de bootstrap -->
-        <link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet">
-        <!-- Estilos de FontAwesome-->
-        <link href="{{ asset('assets/css/font-awesome.css') }}" rel="stylesheet">
-        <!-- Custom -->
-        <link href="{{ asset('assets/css/custom-styles.css') }}" rel="stylesheet">
-        <!-- Google Fonts-->
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"/>
         <!-- Materialize-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="assets/materialize/css/materialize.min.css" media="screen,projection" />
+         <!-- Estilos de bootstrap -->
+         <link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet">
+        <!-- Estilos de FontAwesome-->
+        <link href="{{ asset('assets/css/font-awesome.css') }}" rel="stylesheet">
+         <!-- Custom -->
+         <link href="{{ asset('assets/css/custom-styles.css') }}" rel="stylesheet">
+        <!-- Google Fonts-->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+        <!--Mensaje flotante-->
+        <link href="{{ asset('assets/css/tooltip.css') }}" rel="stylesheet">
+    
+        <!--Autocompletar-->
+        <link href="{{ asset('assets/js/autocomplete') }}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
     </head>
 
     <body>
@@ -101,6 +106,45 @@
                 </div>
             </nav>
 
-            
-
+        </div>
         
+        @yield('content')
+         
+        <!-- Despliegue de submenu y boton cerrar -->
+        <script src="{{ asset('assets/js/jquery-1.10.2.js') }}"></script>
+        <!-- botón cerrar sesión -->
+        <script src="{{ asset('assets/materialize/js/materialize.min.js') }}"></script>
+        <!--Submenu-->
+        <script src="{{ asset('assets/js/jquery.metisMenu.js') }}"></script>
+        <script src="{{ asset('assets/js/custom-scripts.js') }}"></script>
+        <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+		
+        <script>
+            function fisico() {
+                document.querySelector(".fisico").style.display = "block";
+                document.getElementById("fisico").style.display = "block";
+                document.querySelector(".fisico_cli").style.display = "block";
+                document.querySelector(".moral").style.display = "none";
+                document.getElementById("moral").style.display = "none";
+            }
+
+            function moral() {
+                document.querySelector(".moral").style.display = "block";
+                document.getElementById("moral").style.display = "block";
+                document.querySelector(".fisico").style.display = "none";
+                document.getElementById("fisico").style.display = "none";
+                document.querySelector(".fisico_cli").style.display = "none";
+            }
+        </script>
+        
+        <!--Alertas-->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="{{ asset('assets/js/alerta.js') }}"></script>
+        
+
+        <!-- Afecta al menú hamburguesa
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        -->
+    </body>
+</html>

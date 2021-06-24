@@ -1,4 +1,6 @@
-@include('layouts.header')  
+@extends('layouts.app')
+
+@section('content')  
 
         <div id="page-wrapper" >
           <div class="header"> 
@@ -15,15 +17,19 @@
                     <div class="table-responsive">
                       <div class=" col-md-12">
                         <div class="row">
-                          <div class="btn-group col-md-2 right">
-                            <a href="{{ url('/papelera_usu') }}" class="btn btn-warning">
-                              <i class="material-icons left">delete_sweep</i>PAPELERA
-                            </a>
+                          <div class="btn-group  col s12 m2 right">
+                            <span tooltip="Clic para recuperar registros eliminados" flow="left">
+                              <a href="{{ url('/papelera_usu') }}" class="btn btn-warning">
+                                <i class="material-icons left">delete_sweep</i>PAPELERA
+                              </a>
+                            </span>
                           </div>
-                          <div class="btn-group col-md-2 right">
-                            <a href="{{ url('/registrar_usu') }}" class="btn btn-success">
-                              <i class="material-icons left">queue</i>REGISTRAR
-                            </a>
+                          <div class="btn-group col s12 m2 right">
+                            <span tooltip="Clic para registrar nuevo empleado" flow="left">
+                              <a href="{{ url('/registrar_usu') }}" class="btn btn-success">
+                                <i class="material-icons left">queue</i>REGISTRAR
+                              </a>
+                            </span>
                           </div>
                         </div>
                         <div class="row">
@@ -48,7 +54,7 @@
                               </label>
                               <button type="submit" class="btn btn-default">
                                 <span class="glyphicon glyphicon-search"></span>
-                            </button>
+                              </button>
                             </div>
                           </div>
                         </div>
@@ -68,8 +74,12 @@
                             <td class="center">Emi14</td>
                             <td class="center">Evelyn Michelle Baz Pérez</td>
                             <td class="center">
-                              <button  onclick="location.href='{{ url('/actualizar_usu') }}'" type="submit" class="btn-primary dropdown-toggle btn" ><i class="fa fa-pencil-square" ></i></button>
-                              <button type="submit" class="btn btn-danger" onclick="AlertaEliminar()" ><i class="fa fa-trash-o "></i></button>
+                              <span tooltip="Clic para editar usuario" flow="left">
+                                <button  onclick="location.href='{{ url('/actualizar_usu') }}'" type="submit" class="btn-primary dropdown-toggle btn" ><i class="fa fa-pencil-square" ></i></button>
+                              </span>
+                              <span tooltip="Clic para eliminar usuario" flow="left">
+                                <button type="submit" class="btn btn-danger" onclick="AlertaEliminar()" ><i class="fa fa-trash-o "></i></button>
+                              </span>
                             </td>
                           </tr>  
                           <tr class="even gradeC">
@@ -77,8 +87,12 @@
                             <td class="center">Marijo25</td>
                             <td class="center">María José Romero Rosas</td>
                             <td class="center">
-                            <button onclick="location.href='{{ url('/actualizar_usu') }}'" type="submit" class="btn-primary dropdown-toggle btn"><i class="fa fa-pencil-square"></i></button>
-                              <button type="submit" class="btn btn-danger" onclick="AlertaEliminar()"><i class="fa fa-trash-o"></i></button>
+                              <span tooltip="Clic para editar usuario" flow="left">
+                                <button  onclick="location.href='{{ url('/actualizar_usu') }}'" type="submit" class="btn-primary dropdown-toggle btn" ><i class="fa fa-pencil-square" ></i></button>
+                              </span>
+                              <span tooltip="Clic para eliminar usuario" flow="left">
+                                <button type="submit" class="btn btn-danger" onclick="AlertaEliminar()" ><i class="fa fa-trash-o "></i></button>
+                              </span>
                             </td>
                           </tr>  
                           <tr class="odd gradeA">
@@ -86,8 +100,12 @@
                             <td class="center">Carlos10</td>
                             <td class="center">Uriel Hernández Martínez</td>
                             <td class="center">
-                              <button onclick="location.href='{{ url('/actualizar_usu') }}'" type="submit" class="btn-primary dropdown-toggle btn"><i class="fa fa-pencil-square"></i></button>
-                              <button type="submit" class="btn btn-danger" onclick="AlertaEliminar()"><i class="fa fa-trash-o"></i></button>
+                              <span tooltip="Clic para editar usuario" flow="left">
+                                <button  onclick="location.href='{{ url('/actualizar_usu') }}'" type="submit" class="btn-primary dropdown-toggle btn" ><i class="fa fa-pencil-square" ></i></button>
+                              </span>
+                              <span tooltip="Clic para eliminar usuario" flow="left">
+                                <button type="submit" class="btn btn-danger" onclick="AlertaEliminar()" ><i class="fa fa-trash-o "></i></button>
+                              </span>
                             </td>
                           </tr> 
                           <tr class="odd gradeA">
@@ -95,8 +113,12 @@
                             <td class="center">Cris12</td>
                             <td class="center">Cristofer Enríquez Pérez</td>
                             <td class="center">
-                              <button onclick="location.href='{{ url('/actualizar_usu') }}'" type="submit" class="btn-primary dropdown-toggle btn"><i class="fa fa-pencil-square"></i></button>
-                              <button type="submit" class="btn btn-danger" onclick="AlertaEliminar()"><i class="fa fa-trash-o"></i></button>
+                              <span tooltip="Clic para editar usuario" flow="left">
+                                <button  onclick="location.href='{{ url('/actualizar_usu') }}'" type="submit" class="btn-primary dropdown-toggle btn" ><i class="fa fa-pencil-square" ></i></button>
+                              </span>
+                              <span tooltip="Clic para eliminar usuario" flow="left">
+                                <button type="submit" class="btn btn-danger" onclick="AlertaEliminar()" ><i class="fa fa-trash-o "></i></button>
+                              </span>
                             </td>
                           </tr> 
                         </tbody>
@@ -136,4 +158,4 @@
           </div>  
         </div>
         
-@include('layouts.footer')
+@endsection

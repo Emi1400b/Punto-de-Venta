@@ -1,4 +1,6 @@
-@include('layouts.header')  
+@extends('layouts.app')
+
+@section('content')   
         <div id="page-wrapper">
             <div class="header">
                 <h1 class="page-header">
@@ -14,19 +16,25 @@
                                     <div class="row">
                                         <div class="col s12 m11 offset-m1 xl7 offset-xl1 ">
                                             <div class="btn-group right">
-                                                <a href="{{ url('/lista_ventas') }}" class="btn-danger dropdown-toggle btn">
-                                                    <i class="material-icons left">cancel</i>CANCELAR
-                                                </a>
+                                                <span tooltip="Clic para cancelar la operación" flow="left">
+                                                    <a href="{{ url('/lista_ventas') }}" class="btn-danger dropdown-toggle btn">
+                                                        <i class="material-icons left">cancel</i>CANCELAR
+                                                    </a>
+                                                </span>
                                             </div>
                                             <div class="btn-group col-sm-2 right">
-                                                <a onclick="Alertabtn()" href="{{ url('/lista_ventas') }}" class="btn btn-success">
-                                                    <i class="material-icons left">check_circle</i>GUARDAR
-                                                </a>
+                                                <span tooltip="Clic para guardar la información" flow="left">
+                                                    <a onclick="Alertabtn()" href="{{ url('/lista_ventas') }}" class="btn btn-success">
+                                                        <i class="material-icons left">check_circle</i>GUARDAR
+                                                    </a>
+                                                </span>
                                             </div>
                                             <div class="btn-group col-sm-3 left">
-                                                <a href="{{ url('/registrar_prod_rap') }}" class="btn-primary dropdown-toggle btn">
-                                                    <i class="material-icons left">add_shopping_cart</i>PRODUCTO RÁPIDO
-                                                </a>
+                                                <span tooltip="Clic para registrar producto rápido" flow="right">
+                                                    <a href="{{ url('/registrar_prod_rap') }}" class="btn-primary dropdown-toggle btn">
+                                                        <i class="material-icons left">add_shopping_cart</i>PRODUCTO RÁPIDO
+                                                    </a>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -90,9 +98,11 @@
                                             <input type="decimal" id="total_prd" class="form-control" class="validate" placeholder="104.00 ">
                                         </div>
                                         <div class="col s12 m3">
-                                            <a class="btn-floating btn-large waves-effect waves-light btn-success">
-                                                <i class="material-icons">add</i>
-                                            </a>
+                                            <span tooltip="Clic agregar producto a la venta total" flow="left">
+                                                <a class="btn-floating btn-large waves-effect waves-light btn-success">
+                                                    <i class="material-icons">add</i>
+                                                </a>
+                                            </span>
                                         </div>
                                     </div>
                                     <div><label><strong>VENTA GENERAL</strong></label></div>
@@ -132,6 +142,5 @@
                     </div>
                 </div>
             </div>
-
         </div>
-@include('layouts.footer')  
+@endsection

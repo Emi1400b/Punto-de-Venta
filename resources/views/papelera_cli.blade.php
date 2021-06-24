@@ -1,4 +1,6 @@
-@include('layouts.header')  
+@extends('layouts.app')
+
+@section('content') 
 
         <div id="page-wrapper" >
           <div class="header"> 
@@ -16,9 +18,11 @@
                       <div class=" col-md-12">
                         <div class="row">
                           <div class="btn-group col-md-2 right">
-                            <a href="{{ url('/lista_clientes') }}" class="btn btn-warning">
-                              <i class="material-icons left">arrow_back</i>REGRESAR
-                            </a>
+                            <span tooltip="Clic para regresar al listado de clientes" flow="left">
+                              <a href="{{ url('/lista_clientes') }}" class="btn btn-warning">
+                                <i class="material-icons left">arrow_back</i>REGRESAR
+                              </a>
+                            </span>
                           </div>
                         </div>
                         <div class="row">
@@ -56,12 +60,6 @@
                               <th class="center">Nombre completo</th>
                               <th class="center">Razón social</th>
                               <th class="center">RFC</th>
-                              <th class="center">Teléfono</th>
-                              <th class="center">Email</th>
-                              <th class="center">Dirección</th>
-                              <th class="center">límite de crédito</th>
-                              <th class="center">Días de crédito</th>
-                              <th class="center">Frecuente</th>
                               <th class="center">Opciones</th>
                             </tr>
                         </thead>
@@ -72,16 +70,12 @@
                             <td class="center">Mónica Méndez Luna</td>
                             <td class="center"></td>
                             <td class="center">MELM9405281H0</td>
-                            <td class="center">2721002321</td>
-                            <td class="center">monica.melu2@gmail.com</td>
-                            <td class="center">Salvador Gonzalo Garcia No.20, Centro, C.P. 94300, Orizaba, Veracruz</th>   
-                            <td class="center">$2,000.00</td>
-                            <td class="center">30</td>
-                            <td class="center">Bajo</td>
                             <td class="center">
-                              <a onclick="Alertabtn()">
-                                <button onclick="location.href='{{ url('/lista_clientes') }}'"  type="submit" class="btn-primary dropdown-toggle btn"><i class="fa fa-repeat"></i></button>
-                              </a>
+                              <span tooltip="Clic para reestablecer cliente" flow="left">
+                                <a onclick="Alertabtn()">
+                                  <button onclick="location.href='{{ url('/lista_clientes') }}'"  type="submit" class="btn-primary dropdown-toggle btn"><i class="fa fa-repeat"></i></button>
+                                </a>
+                              </span>
                             </td>
                           </tr>  
                           <tr class="even gradeC">
@@ -90,16 +84,12 @@
                             <td class="center"></td>
                             <td class="center">REFACCIONARIA LAS ARCINAS S.A. DE C.V.</td>
                             <td class="center">RAR-970407-CF1</td>
-                            <td class="center">2724783502</td>
-                            <td class="center">paquin.miempresa59@gmail.com</td>
-                            <td class="center">Av. 1 No.125, Centro, C.P. 94475, Fortín de la Flores, Veracruz</th>   
-                            <td class="center">$25,000.00</td>
-                            <td class="center">280</td>
-                            <td class="center">Alto</td>
                             <td class="center">
-                              <a onclick="Alertabtn()">
-                                <button onclick="location.href='{{ url('/lista_clientes') }}'"  type="submit" class="btn-primary dropdown-toggle btn"><i class="fa fa-repeat"></i></button>
-                              </a>
+                              <span tooltip="Clic para reestablecer cliente" flow="left">
+                                <a onclick="Alertabtn()">
+                                  <button onclick="location.href='{{ url('/lista_clientes') }}'"  type="submit" class="btn-primary dropdown-toggle btn"><i class="fa fa-repeat"></i></button>
+                                </a>
+                              </span>
                             </td>
                           </tr>  
                         </tbody>
@@ -139,4 +129,4 @@
           </div>  
         </div>
 
-@include('layouts.footer')
+@endsection

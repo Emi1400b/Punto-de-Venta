@@ -1,4 +1,6 @@
-@include('layouts.header')  
+@extends('layouts.app')
+
+@section('content')
 
         <div id="page-wrapper" >
           <div class="header"> 
@@ -16,9 +18,11 @@
                       <div class=" col-md-12">
                         <div class="row">
                           <div class="btn-group col-md-2 right">
-                            <a href="{{ url('/lista_pues') }}" class="btn btn-warning">
-                              <i class="material-icons left">arrow_back</i>REGRESAR
-                            </a>
+                            <span tooltip="Clic para regresar al listado de puestos" flow="left">
+                              <a href="{{ url('/lista_pues') }}" class="btn btn-warning">
+                                <i class="material-icons left">arrow_back</i>REGRESAR
+                              </a>
+                            </span>
                           </div>
                         </div>
                         <div class="row">
@@ -61,27 +65,33 @@
                             <td class="center">5</td>
                             <td class="center">Vendedor</td>
                             <td class="center">
+                              <span tooltip="Clic para reestablecer puesto" flow="left">
                                 <a onclick="Alertabtn()">
                                     <button onclick="location.href='{{ url('/lista_pues') }}'"  type="submit" class="btn-primary dropdown-toggle btn"><i class="fa fa-repeat"></i></button>
                                 </a>
+                              </span>
                             </td>
                           </tr> 
                           <tr class="odd gradeA">
                             <td class="center">6</td>
                             <td class="center">Repartidor</td>
                             <td class="center">
+                              <span tooltip="Clic para reestablecer puesto" flow="left">
                                 <a onclick="Alertabtn()">
                                     <button onclick="location.href='{{ url('/lista_pues') }}'"  type="submit" class="btn-primary dropdown-toggle btn"><i class="fa fa-repeat"></i></button>
                                 </a>
+                              </span>
                             </td>
                           </tr> 
                           <tr class="odd gradeA">
                             <td class="center">7</td>
                             <td class="center">Asesor de ventas</td>
                             <td class="center">
+                              <span tooltip="Clic para reestablecer puesto" flow="left">
                                 <a onclick="Alertabtn()">
                                     <button onclick="location.href='{{ url('/lista_pues') }}'"  type="submit" class="btn-primary dropdown-toggle btn"><i class="fa fa-repeat"></i></button>
                                 </a>
+                              </span>
                             </td>
                           </tr> 
                         </tbody>
@@ -121,4 +131,4 @@
           </div>  
         </div>
         
-@include('layouts.footer')
+@endsection
