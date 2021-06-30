@@ -55,17 +55,11 @@
                       <table class="table table-striped table-bordered table-hover">
                         <thead>
                             <tr>
-                              <th class="center">ID</th>
+                              <th class="center">No.</th>
                               <th class="center">Usuario</th>
                               <th class="center">Cliente</th>
                               <th class="center">Fecha</th>
                               <th class="center">Representante</th>
-                              <th class="center">Saldo de crédito</th>
-                              <th class="center">IVA total</th>
-                              <th class="center">Subtotal</th>
-                              <th class="center">Descuento total</th>
-                              <th class="center">Total</th>
-                              <th class="center">Forma de pago</th>
                               <th class="center">Opciones</th>
                             </tr>
                         </thead>
@@ -76,13 +70,10 @@
                             <td class="center">Carmela Ramírez Correa</td>
                             <td class="center">16/06/2021 </td>
                             <td class="center"></td>
-                            <td class="center">0.00</td>
-                            <td class="center">$25.00</td>
-                            <td class="center">$275.00</th>   
-                            <td class="center">$30.00</td>
-                            <td class="center">$245.00</td>
-                            <td class="center">Efectivo</td>
                             <td class="center">
+                              <span tooltip="Clic para ver más detalles" flow="left">
+                                <button  data-toggle="modal" data-target="#modalempleado" type="submit" class="btn btn-info"><i class="fa fa-eye"></i></button>
+                              </span>
                               <span tooltip="Clic para editar venta" flow="left">
                                 <button  onclick="location.href='{{ url('/actualizar_venta') }}'" type="submit" class="btn-primary dropdown-toggle btn" ><i class="fa fa-pencil-square" ></i></button>
                               </span>
@@ -96,14 +87,11 @@
                             <td class="center">Carlos10</td>
                             <td class="center">PAQUIN, S.A. DE C.V.</td>
                             <td class="center">17/06/2021</td>
-                            <td class="center">Luis Alberto Remírez</td>
-                            <td class="center">$320.00</td>
-                            <td class="center">$15.00</td>
-                            <td class="center">$150.00</th>   
-                            <td class="center">$35.00</td>
-                            <td class="center">$115.00</td>
-                            <td class="center">Transferencia</td>
+                            <td class="center">Luis Alberto Ramírez</td>
                             <td class="center">
+                              <span tooltip="Clic para ver más detalles" flow="left">
+                                <button  data-toggle="modal" data-target="#modalempleado" type="submit" class="btn btn-info"><i class="fa fa-eye"></i></button>
+                              </span>
                               <span tooltip="Clic para editar venta" flow="left">
                                 <button  onclick="location.href='{{ url('/actualizar_venta') }}'" type="submit" class="btn-primary dropdown-toggle btn" ><i class="fa fa-pencil-square" ></i></button>
                               </span>
@@ -118,13 +106,10 @@
                             <td class="center">Ulises Cuevas Pérez</td>
                             <td class="center">18/06/2021</td>
                             <td class="center"></td>
-                            <td class="center">0.00</td>
-                            <td class="center">$50.00</td>
-                            <td class="center">$200.00</th>   
-                            <td class="center">$40.00</td>
-                            <td class="center">$160.00</td>
-                            <td class="center">Tarjeta</td>
                             <td class="center">
+                              <span tooltip="Clic para ver más detalles" flow="left">
+                                <button  data-toggle="modal" data-target="#modalempleado" type="submit" class="btn btn-info"><i class="fa fa-eye"></i></button>
+                              </span>
                               <span tooltip="Clic para editar venta" flow="left">
                                 <button  onclick="location.href='{{ url('/actualizar_venta') }}'" type="submit" class="btn-primary dropdown-toggle btn" ><i class="fa fa-pencil-square" ></i></button>
                               </span>
@@ -139,13 +124,10 @@
                             <td class="center">JORGE CARLOS RODRIGUEZ LANDEROS</td>
                             <td class="center">19/06/2021</td>
                             <td class="center">Mario García Montero</td>
-                            <td class="center">$715.00</td>
-                            <td class="center">$55.00</td>
-                            <td class="center">$360.00</th>   
-                            <td class="center">$25.00</td>
-                            <td class="center">$335.00</td>
-                            <td class="center">Cheque</td>
                             <td class="center">
+                              <span tooltip="Clic para ver más detalles" flow="left">
+                                <button  data-toggle="modal" data-target="#modalempleado" type="submit" class="btn btn-info"><i class="fa fa-eye"></i></button>
+                              </span>
                               <span tooltip="Clic para editar venta" flow="left">
                                 <button  onclick="location.href='{{ url('/actualizar_venta') }}'" type="submit" class="btn-primary dropdown-toggle btn" ><i class="fa fa-pencil-square" ></i></button>
                               </span>
@@ -156,6 +138,89 @@
                           </tr> 
                         </tbody>
                       </table>  
+
+                      <!-- Modal de empleados-->
+                      <div class="modal fade" id="modalempleado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div role="document">
+                              <div class="modal-content">
+                                <div class="modal-body">
+                                  <div id="page-inner">
+                                      <div class="row">
+                                          <div class="col-lg-12">
+                                              <div class="card">
+                                                  <div class="card-content">
+                                                      <form class="col s12">
+                                                          <div class="center"><label><strong>CRÉDITO</strong></label></div>
+                                                          <div class="row">
+                                                              <div class="col s12 m3">
+                                                                <label for="saldo" class="form-label">Saldo</label>
+                                                              </div>
+                                                              <div class="col s12 m3">
+                                                                <input type="decimal" class="form-control validate" id="saldo" disabled="disabled" placeholder="1000">
+                                                              </div>
+                                                              <div class="col s12 m3">
+                                                                <label for="estatus" class="form-label">Estatus</label>
+                                                              </div>
+                                                              <div class="col s12 m3">
+                                                                <input type="smallint" class="form-control validate" id="estatus" disabled="disabled" placeholder="1000">
+                                                              </div>
+                                                          </div>
+                                                          <div class="center"><label><strong>VENTA</strong></label></div>
+                                                          <div class="row">
+                                                              <div class="col s12 m6">
+                                                                <label for="iva_tot" class="form-label">IVA total</label>
+                                                              </div>
+                                                              <div class="col s12 m6">
+                                                                <input type="decimal" class="form-control" id="iva_tot validate" disabled="disabled" placeholder="4.00">
+                                                              </div>
+                                                          </div>
+                                                          <div class="row">
+                                                              <div class="col s12 m6">
+                                                                <label for="Subt_gen">Subtotal</label>
+                                                              </div>
+                                                              <div class="col s12 m6">
+                                                                <input type="decimal"  id="desc_tot" class="form-control validate" disabled="disabled" placeholder="10.00">
+                                                              </div>
+                                                          </div>
+                                                          <div class="row">
+                                                              <div class="col s12 m6">
+                                                                <label for="desc_tot"> Descuento total </label>
+                                                              </div>
+                                                              <div class="col s12 m6">
+                                                                <input type="decimal"  id="desc_tot" class="form-control validate" disabled="disabled" placeholder="10.00">
+                                                              </div>
+                                                          </div>
+                                                          <div class="row">
+                                                              <div class="col s12 m6">
+                                                                <label for="total_gen">Total</label>
+                                                              </div>
+                                                              <div class="col s12 m6">
+                                                                <input type="decimal" id="total_gen" class="form-control validate" disabled="disabled" placeholder="154.00">
+                                                              </div>
+                                                          </div>
+                                                          <div class="row">
+                                                              <div class="col s12 m6">
+                                                                <label for="form_pag" class="form-label">Forma de pago</label>
+                                                              </div>
+                                                              <div class="col s12 m6">
+                                                                <input type="varchar" class="form-control validate" id="form_pag" disabled="disabled" placeholder="Efectivo">
+                                                              </div>
+                                                          </div>
+                                                      </form>
+                                                      <div class="clearBoth">
+                                                        <div class="modal-footer">
+                                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                                        </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div> 
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
 
                       <div class="row">
                         <div class="col-sm-6">
@@ -190,5 +255,4 @@
             </div>
           </div>  
         </div>
-
 @endsection

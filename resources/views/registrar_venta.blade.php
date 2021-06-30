@@ -47,17 +47,17 @@
                                         <div class="col s12 m2">
                                             <input type="varchar" class="form-control validate" id="estatus" placeholder="Código">
                                         </div>
+                                        <div class="col s12 m1 left">
+                                            <span tooltip="Clic para abrir cámara" flow="left">
+                                                <button type="submit" class="btn btn-secondary dropdown-toggle btn" ><i class="fa fa-camera"></i></button>
+                                            </span>
+                                        </div>
                                         <div class="col s12 m3">
                                             <input type="varchar" class="form-control validate" id="estatus" placeholder="Nombre del productos">
                                         </div>
                                         <div class="col s12 m2 ">
                                             <span tooltip="Clic para agregar producto a la venta" flow="left">
                                                 <button type="submit" class="btn-info dropdown-toggle btn" ><i class="material-icons">add_circle</i></button>
-                                            </span>
-                                        </div>
-                                        <div class="col s12 m2 ">
-                                            <span tooltip="Clic para generar código QR" flow="left">
-                                                <button type="submit" class="btn btn-secondary dropdown-toggle btn" ><i class="fa fa-qrcode"></i></button>
                                             </span>
                                         </div>
                                         <div class="col s12 m3 ">
@@ -129,7 +129,7 @@
                                             <input type="decimal" id="total_gen" class="form-control validate" placeholder="154.00">
                                         </div>
                                         <div class="col s12 m3">
-                                            <label for="tipo_num" class="form-label">Forma de pago</label>
+                                            <label for="form_pag" class="form-label">Forma de pago</label>
                                             <select  type="varchar" class="form-control">
                                                 <option value="" disabled selected >Desplega la lista...</option>
                                                 <option value="Efectivo">Efectivo</option>

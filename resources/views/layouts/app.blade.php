@@ -55,10 +55,15 @@
             </nav>
             <!-- Estructura de usuario-->
             <ul id="dropdown1" class="dropdown-content">
-                <li>
-                <a href="{{ url('/login') }}"><i class="fa fa-sign-out fa-fw"></i> Cerrar Sesión</a>
-                </li>
+                <form action="/logout" method="POST">
+                {{ csrf_field() }}
+                    <li>
+                        <a href="#" onclick="this.closest('form').submit()"><i class="fa fa-sign-out fa-fw"></i> Cerrar Sesión</a>
+                    </li>
+                </form>
             </ul>
+            
+            
             <!--Menú lateral -->
             <nav class="navbar-default navbar-side" role="navigation">
                 <div class="sidebar-collapse">

@@ -62,7 +62,7 @@
                       <table class="table table-striped table-bordered table-hover">
                         <thead>
                             <tr>
-                              <th class="center">ID</th>
+                              <th class="center">No.</th>
                               <th class="center">No. cliente</th>
                               <th class="center">Nombre completo</th>
                               <th class="center">Razón social</th>

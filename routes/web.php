@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmpleadoController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\UsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,100 +16,61 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Ruta de login
+Route::view('/', '/auth/login')->name('login')->middleware('guest');
 
-//Muestra el diseño de las vistas 
+Route::get('/registrar', [UsuarioController::class, 'index']);
 
-Route::get('/login', function () {
-    return view('login');
-});
+//Ruta que acepta petición POST a la URL de login
+Route::get('/', [LoginController::class, 'login']);
 
-Route::get('/index', function () {
-    return view('index');
-});
+//Ruta de cerrar sesión
+Route::post('logout', [LoginController::class, 'logout']);
 
-Route::get('/lista_usuarios', function () {
-    return view('lista_usuarios');
-});
+Route::view('index','index')->middleware('auth');
 
-    Route::get('/registrar_usu', function () {
-        return view('registrar_usu');
-    });
+Route::view('lista_usuarios','lista_usuarios')->middleware('auth');
 
-    Route::get('/actualizar_usu', function () {
-        return view('actualizar_usu');
-    });
+Route::view('registrar_usu','registrar_usu')->middleware('auth');
 
-    Route::get('/papelera_usu', function () {
-        return view('papelera_usu');
-    });
+Route::view('actualizar_usu','actualizar_usu')->middleware('auth');
 
-Route::get('/lista_empleados', function () {
-    return view('lista_empleados');
-});
+Route::view('papelera_usu','papelera_usu')->middleware('auth');
 
-    Route::get('/registrar_emp', function () {
-        return view('registrar_emp');
-    });
+Route::view('lista_empleados','lista_empleados')->middleware('auth');
 
-    Route::get('/actualizar_emp', function () {
-        return view('actualizar_emp');
-    });
+Route::view('registrar_emp','registrar_emp')->middleware('auth');
 
-    Route::get('/papelera_emp', function () {
-        return view('papelera_emp');
-    });
+Route::view('actualizar_emp','actualizar_emp')->middleware('auth');
 
-Route::get('/lista_pues', function () {
-    return view('lista_pues');
-});
+Route::view('papelera_emp','papelera_emp')->middleware('auth');
 
-    Route::get('/registrar_pues', function () {
-        return view('registrar_pues');
-    });
+Route::view('lista_pues','lista_pues')->middleware('auth');
 
-    Route::get('/actualizar_pues', function () {
-        return view('actualizar_pues');
-    });
+Route::view('registrar_pues','registrar_pues')->middleware('auth');
 
-    Route::get('/papelera_pues', function () {
-        return view('papelera_pues');
-    });
+Route::view('actualizar_pues','actualizar_pues')->middleware('auth');
 
-Route::get('/lista_clientes', function () {
-    return view('lista_clientes');
-});
+Route::view('papelera_pues','papelera_pues')->middleware('auth');
 
-    Route::get('/registrar_cli', function () {
-        return view('registrar_cli');
-    });
+Route::view('lista_clientes','lista_clientes')->middleware('auth');
 
-    Route::get('/actualizar_cli', function () {
-        return view('actualizar_cli');
-    });
+Route::view('registrar_cli','registrar_cli')->middleware('auth');
 
-    Route::get('/papelera_cli', function () {
-        return view('papelera_cli');
-    });
+Route::view('actualizar_cli','actualizar_cli')->middleware('auth');
 
-Route::get('/lista_ventas', function () {
-    return view('lista_ventas');
-});   
+Route::view('papelera_cli','papelera_cli')->middleware('auth');
 
-    Route::get('/registrar_venta', function () {
-        return view('registrar_venta');
-    });
+Route::view('lista_ventas','lista_ventas')->middleware('auth');
 
-    Route::get('/actualizar_venta', function () {
-        return view('actualizar_venta');
-    });
+Route::view('registrar_venta','registrar_venta')->middleware('auth');
 
-    Route::get('/registrar_prod_rap', function () {
-        return view('registrar_prod_rap');
-    });
+Route::view('actualizar_venta','actualizar_venta')->middleware('auth');
 
-Route::get('/registrar_pagos_cred', function () {
-    return view('registrar_pagos_cred');
-});
+Route::view('registrar_prod_rap','registrar_prod_rap')->middleware('auth');
+
+Route::view('registrar_pagos_cred','registrar_pagos_cred')->middleware('auth');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

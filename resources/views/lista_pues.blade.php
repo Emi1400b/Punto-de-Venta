@@ -62,7 +62,7 @@
                       <table class="table table-striped table-bordered table-hover">
                         <thead>
                             <tr>
-                                <th class="center">ID</th>
+                                <th class="center">No.</th>
                                 <th class="center">Puesto</th>
                                 <th class="center">Opciones</th>
                             </tr>

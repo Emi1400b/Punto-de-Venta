@@ -21,19 +21,19 @@
                                         </div>
                                         <div class="col s12 m2 ">
                                             <label for="alias" class="form-label">Alias</label>
-                                            <input type="varchar" class="form-control" id="alias" class="validate" placeholder="Eve">
+                                            <input type="varchar" class="form-control validate" id="alias" placeholder="Eve">
                                         </div>
                                         <div class="col s12 m3 ">
                                             <label for="nombre" class="form-label">Nombre</label>
-                                            <input type="varchar" class="form-control" id="nombre" class="validate" placeholder="Evelyn">
+                                            <input type="varchar" class="form-control validate" id="nombre"  placeholder="Evelyn">
                                         </div>
                                         <div class="col s12 m3 ">
                                             <label for="apellido_ap" class="form-label">Primer apellido</label>
-                                            <input type="varchar" class="form-control" id="apellido" class="validate" placeholder="Baz">
+                                            <input type="varchar" class="form-control validate" id="apellido"  placeholder="Baz">
                                         </div>
                                         <div class="col s12 m2">
                                             <label for="segundo_ap" class="form-label">Segundo apellido</label>
-                                            <input type="varchar" class="form-control" id="segundo_ap" class="validate" placeholder="Pérez">
+                                            <input type="varchar" class="form-control validate" id="segundo_ap" placeholder="Pérez">
                                         </div>
                                     </div>
                                     <div class="row">

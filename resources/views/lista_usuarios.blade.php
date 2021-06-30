@@ -62,7 +62,7 @@
                       <table class="table table-striped table-bordered table-hover">
                         <thead>
                             <tr>
-                                <th class="center">ID</th>
+                                <th class="center">No.</th>
                                 <th class="center">Usuario</th>
                                 <th class="center">Empleado perteneciente</th>
                                 <th class="center">Opciones</th>
